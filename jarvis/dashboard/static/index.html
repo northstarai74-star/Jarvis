@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JARVIS</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <h1>JARVIS</h1>
+  <p class="sub">Read-only view. Approvals happen by PIN at the keyboard or on the phone.</p>
+  <p class="clock" id="clock"></p>
+</header>
+
+<main class="grid">
+  <section class="panel" id="panel-activity" aria-labelledby="h-activity">
+    <h2 id="h-activity">Activity</h2>
+    <ul class="list" id="activity"></ul>
+  </section>
+
+  <section class="centre" aria-label="Status">
+    <div class="orb-wrap">
+      <canvas id="orb" aria-hidden="true"></canvas>
+    </div>
+    <p class="state" id="state" role="status">Connecting</p>
+    <p class="reason" id="reason"></p>
+    <dl class="stats" id="stats"></dl>
+  </section>
+
+  <div class="side">
+    <section class="panel" aria-labelledby="h-approvals">
+      <h2 id="h-approvals">Approvals waiting</h2>
+      <ul class="list" id="approvals"></ul>
+    </section>
+    <section class="panel" aria-labelledby="h-meetings">
+      <h2 id="h-meetings">Meetings</h2>
+      <ul class="list" id="meetings"></ul>
+    </section>
+    <section class="panel" aria-labelledby="h-calls">
+      <h2 id="h-calls">Calls</h2>
+      <ul class="list" id="calls"></ul>
+    </section>
+  </div>
+</main>
+
+<script src="/static/orb.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
